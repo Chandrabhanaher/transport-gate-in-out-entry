@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="#FFFFFF"
+    android:layout_height="match_parent"
+    tools:context=".reports.Vehicle_Wise_Report">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#FFFFFF"
+        android:orientation="vertical">
+        <TableLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:stretchColumns="1">
+
+            <TableRow
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@color/bgBottomNavigation">
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="37dp"
+                    android:background="#000"
+                    />
+                <TextView
+                    android:layout_width="0dip"
+                    android:layout_height="wrap_content"
+                    android:background="@color/bgBottomNavigation"
+                    android:textColor="#FFFFFF"
+                    android:padding="10dip"
+                    android:textSize="12sp"
+                    android:gravity="center"
+                    android:layout_weight="1"
+                    android:text="Vehicle No" />
+                <View
+                    android:layout_width="1dp"
+                    android:layout_height="37dp"
+                    android:background="#000"
+                    />
+                <TextView
+                    android:layout_width="0dip"
+                    android:layout_height="wrap_content"
+                    android:background="@color/bgBottomNavigation"
+                    android:textColor="#FFFFFF"
+                    android:padding="10dip"
+                    android:textSize="12sp"
+                    android:gravity="center"
+                    android:layout_weight="1"
+                    android:text="Sup.Name" />
+                <View
+                    android:layout_width="1dp"
+                    android:layout_height="37dp"
+                    android:background="#000"
+                    />
+                <!-- Column 3 -->
+                <TextView
+                    android:layout_width="0dip"
+                    android:layout_height="wrap_content"
+                    android:background="@color/bgBottomNavigation"
+                    android:textColor="#FFFFFF"
+                    android:padding="10dip"
+                    android:textSize="12sp"
+                    android:gravity="center"
+                    android:layout_weight="1"
+                    android:text="IN Time" />
+                <View
+                    android:layout_width="1dp"
+                    android:layout_height="37dp"
+                    android:background="#000"
+                    />
+                <TextView
+                    android:layout_width="0dip"
+                    android:layout_height="wrap_content"
+                    android:background="@color/bgBottomNavigation"
+                    android:textColor="#FFFFFF"
+                    android:padding="10dip"
+                    android:textSize="12sp"
+                    android:gravity="center"
+                    android:layout_weight="1"
+                    android:text="Out Time" />
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="37dp"
+                    android:background="#000"
+                    />
+            </TableRow>
+            <View
+                android:layout_width="0dp"
+                android:layout_height="2dp"
+                android:background="#000"
+                />
+        </TableLayout>
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/itemsss"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp">
+        </android.support.v7.widget.RecyclerView>
+    </LinearLayout>
+    <android.support.design.widget.BottomNavigationView
+        android:id="@+id/navigation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:background="?android:attr/windowBackground"
+        app:itemBackground="@color/bgBottomNavigation"
+        android:foreground="?attr/selectableItemBackground"
+        app:itemIconTint="@android:color/white"
+        app:itemTextColor="@android:color/white"
+        app:menu="@menu/navigation" />
+
+</android.support.design.widget.CoordinatorLayout>

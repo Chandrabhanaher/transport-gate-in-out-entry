@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.ugc.ugc">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+    <uses-permission android:name="android.permission.BLUETOOTH" />
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/logo"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/logo"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity
+            android:name=".Splash"
+            android:label="@string/app_name"
+            android:theme="@style/AppTheme.NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".Home"
+			android:screenOrientation="portrait"
+            android:label="@string/ugc1" />
+        <activity
+            android:name=".vehicle_in_out.Vehical_In"
+			android:screenOrientation="portrait"
+            android:label="@string/vcalD" />
+        <activity
+            android:name=".vehicle_in_out.Tran_Veh_In"
+            android:label="@string/ind"
+android:screenOrientation="portrait"			/>
+        <activity android:name=".vehicle_in_out.NewTrans"
+android:screenOrientation="portrait"		/>
+        <activity android:name=".printing.Prints" 
+		android:screenOrientation="portrait"/>
+        <activity
+            android:name=".printing.DeviceListActivity"
+            android:theme="@android:style/Theme.DeviceDefault.Dialog"
+android:screenOrientation="portrait"			/>
+        <activity android:name=".session.Login" />
+        <activity
+            android:name=".reports.Vehicle_Wise_Report"
+            android:label="@string/trans_report" 
+			android:screenOrientation="portrait"/>
+        <activity
+            android:name=".reports.Date_Reports"
+            android:label="@string/repotrt" 
+			android:screenOrientation="portrait"/>
+    </application>
+
+</manifest>

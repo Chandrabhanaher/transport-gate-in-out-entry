@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/root">
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="fill_parent"
+        android:layout_height="50dp"
+        android:gravity="center"
+        android:background="@color/colorAccent">
+        <TextView
+            android:textColor="#FFF"
+            android:textSize="20sp"
+            android:text="@string/choose"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"/>
+    </LinearLayout>
+
+   <LinearLayout
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:orientation="vertical"
+       android:layout_margin="16dp"
+       android:gravity="center">
+       <android.support.v7.widget.AppCompatButton
+           android:id="@+id/buttonConfirm1"
+           android:layout_width="wrap_content"
+           android:layout_height="30dp"
+           android:background="@android:color/transparent"
+           android:padding="3dp"
+           android:textSize="14sp"
+           android:text="@string/manually"
+           android:gravity="center"
+           android:layout_gravity="center"
+           android:textColor="@color/colorPrimary" />
+       <android.support.v7.widget.AppCompatButton
+           android:id="@+id/buttonConfirm2"
+           android:layout_width="wrap_content"
+           android:layout_height="30dp"
+           android:background="@android:color/transparent"
+           android:textColor="@color/colorPrimary"
+           android:padding="3dp"
+           android:textSize="14sp"
+           android:text="@string/scaanQr"
+           android:gravity="center"
+           android:layout_gravity="center"
+           android:layout_margin="16dp"/>
+       <android.support.v7.widget.AppCompatButton
+           android:id="@+id/buttonConfirm3"
+           android:layout_width="wrap_content"
+           android:layout_height="30dp"
+           android:background="@android:color/transparent"
+           android:padding="3dp"
+           android:textSize="14sp"
+           android:text="@string/sanImage"
+           android:gravity="center"
+           android:layout_gravity="center"
+           android:textColor="@color/colorPrimary" />
+   </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp">
+
+        <LinearLayout
+            android:id="@+id/l1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_margin="16dp">
+
+                <EditText
+                    android:id="@+id/veh_no"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:hint="@string/Evno"
+                    android:inputType="textCapCharacters"
+                    android:textAllCaps="true"
+                    android:textSize="14sp" />
+            </android.support.design.widget.TextInputLayout>
+
+            <android.support.v7.widget.AppCompatButton
+                android:id="@+id/buttonConfirm14"
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:layout_gravity="center"
+                android:background="@color/colorPrimary"
+                android:gravity="center"
+                android:padding="3dp"
+                android:text="@string/submit"
+                android:textColor="#ffffff"
+                android:textSize="14sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/l2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:id="@+id/r1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:visibility="gone">
+
+                <ImageView
+                    android:id="@+id/imageView"
+                    android:layout_width="303dp"
+                    android:layout_height="150dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginEnd="15dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="15dp" />
+
+                <Button
+                    android:id="@+id/buRotate"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:background="@drawable/ic_rotate_right_black_24dp" />
+            </RelativeLayout>
+
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal">
+
+                <EditText
+                    android:id="@+id/veh_no1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:hint="@string/Evno"
+                    android:inputType="textCapCharacters"
+                    android:textAllCaps="true"
+                    android:textSize="14sp" />
+            </android.support.design.widget.TextInputLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <Button
+                        android:id="@+id/button1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="40dp"
+                        android:text="@string/capture"
+                        android:background="@drawable/rounded_button"
+                        android:textSize="14sp" />
+
+                    <Button
+                        android:id="@+id/button2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="40dp"
+                        android:text="@string/submit"
+                        android:background="@drawable/rounded_button"
+                        android:textSize="14sp" />
+                </RelativeLayout>
+
+                <Button
+                    android:id="@+id/button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:layout_marginLeft="20dp"
+                    android:text="@string/getsText"
+                    android:background="@drawable/rounded_button"
+                    android:textSize="14sp" />
+            </LinearLayout>
+        </LinearLayout>
+    </RelativeLayout>
+
+</LinearLayout>
