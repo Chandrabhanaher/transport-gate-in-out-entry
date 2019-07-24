@@ -1,4 +1,4 @@
-# transport gatein-out entry
+# transport gate In-Out entry
 Android JSON, Volley libary with PHP web services
 
 Scan vehicle no and create qr code gate in time.
