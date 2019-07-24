@@ -1,8 +1,7 @@
 package com.example.ugc.ugc;
 
  public class Config {
-     public static final String API = "http://14.143.175.253:8080/ugc_trans/";//"14.143.175.253:8080";
-
+     public static final String API = "http://localhost/ugc_trans/";
      public static final String USER_LOGINS = API+"user_login.php";
      public static final String CUST_LIST = API+"cust_spinner.php";
      public static final String SHARED_PREF_NAME = "UGC";
