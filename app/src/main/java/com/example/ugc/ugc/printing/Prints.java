@@ -23,6 +23,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.example.tscdll.TSCActivity;
 import com.example.ugc.ugc.Home;
 import com.example.ugc.ugc.R;
 import com.google.zxing.BarcodeFormat;
@@ -35,6 +36,7 @@ import org.json.JSONObject;
 
 import java.io.ByteArrayOutputStream;
 import java.io.IOException;
+import java.io.InputStream;
 import java.io.OutputStream;
 import java.nio.ByteBuffer;
 import java.util.Set;
@@ -54,11 +56,13 @@ public class Prints extends Activity implements Runnable {
     BluetoothDevice mBluetoothDevice;
     Bitmap bitmap;
     private static OutputStream outputStream;
+    private static byte[] readBuf = new byte[1024];
 
     String TID,VEHICLENO,DRIVERNAME,DR_CONTACT,INVNO,SUPPLIERNAME,INTIME,TITLE,statusload;
     ImageView imageView;
     TextView txtId,txtVehicalNo,txtDriName,txtdriContatc,txtInvNo,txtSname,txtDate,txtTitle;
     public final static int QRcodeWidth = 150 ;
+
     @Override
     public void onCreate(Bundle mSavedInstanceState) {
         super.onCreate(mSavedInstanceState);
@@ -89,14 +93,14 @@ public class Prints extends Activity implements Runnable {
         mScan = (Button) findViewById(R.id.Scan);
         mScan.setOnClickListener(new View.OnClickListener() {
             public void onClick(View mView) {
+
                 mBluetoothAdapter = BluetoothAdapter.getDefaultAdapter();
                 if (mBluetoothAdapter == null) {
                     Toast.makeText(Prints.this, "Not found device", Toast.LENGTH_SHORT).show();
                 } else {
                     if (!mBluetoothAdapter.isEnabled()) {
                         Intent enableBtIntent = new Intent(BluetoothAdapter.ACTION_REQUEST_ENABLE);
-                        startActivityForResult(enableBtIntent,
-                                REQUEST_ENABLE_BT);
+                        startActivityForResult(enableBtIntent,REQUEST_ENABLE_BT);
                     } else {
                         ListPairedDevices();
                         Intent connectIntent = new Intent(Prints.this, DeviceListActivity.class);
@@ -109,6 +113,7 @@ public class Prints extends Activity implements Runnable {
         mPrint = (Button) findViewById(R.id.mPrint);
         mPrint.setOnClickListener(new View.OnClickListener() {
             public void onClick(View mView) {
+
                 Thread t = new Thread() {
                     public void run() {
                         try {
@@ -161,7 +166,6 @@ public class Prints extends Activity implements Runnable {
                             int n_width = 2;
                             os.write(intToByteArray(n_width));
 
-
                         } catch (Exception e) {
                             Log.e("Prints", "Exe ", e);
                         }
@@ -169,6 +173,7 @@ public class Prints extends Activity implements Runnable {
                 };
                 t.start();
             }
+
         });
 
         mDisc = (Button) findViewById(R.id.dis);
@@ -180,6 +185,7 @@ public class Prints extends Activity implements Runnable {
         });
 
     }// onCreate
+
     private void ganarateQRCode() {
         try {
             JSONObject jsonObj = new JSONObject();

@@ -33,6 +33,7 @@ dependencies {
     implementation 'com.journeyapps:zxing-android-embedded:3.4.0'
     implementation 'com.google.android.gms:play-services-vision:10.2.4'
     implementation files('libs/itextpdf-5.5.5.jar')
+    implementation files('libs/tscsdk.jar')
     testImplementation 'junit:junit:4.12'
     androidTestImplementation 'com.android.support.test:runner:1.0.2'
     androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'

@@ -73,7 +73,7 @@ public class Home extends AppCompatActivity implements View.OnClickListener {
     private static final String TAG = "Home";
     SessionManager session;
     String USER_NAME;
-    CardView btnNewEntry,btnInEntry,btnOutEntry,btnReport;
+    CardView btnNewEntry,btnInEntry,btnOutEntry,btnReport,btnDock;
     AppCompatButton buttonConfirm;
     EditText editTextVeNo, editTrans;
     RequestQueue requestQueue;
@@ -116,10 +116,11 @@ public class Home extends AppCompatActivity implements View.OnClickListener {
         btnReport.setOnClickListener(this);
 
         qrScan = new IntentIntegrator(this);
-
         qrScan1 = new IntentIntegrator(this);
 
         dateFormatter = new SimpleDateFormat("dd-MMM-yyyy", Locale.US);
+        btnDock = findViewById(R.id.Dock_IN_OUT);
+        btnDock.setOnClickListener(this);
 
     }
 
@@ -163,6 +164,8 @@ public class Home extends AppCompatActivity implements View.OnClickListener {
             fromDatePickerDialog.show();
         }if (id == R.id.in_dates){
             toDatePickerDialog.show();
+        }if(id == R.id.Dock_IN_OUT){
+
         }
     }
 
@@ -568,14 +571,14 @@ public class Home extends AppCompatActivity implements View.OnClickListener {
                     //Convert the QR Code Data to JSON
                     JSONObject obj = new JSONObject(result.getContents());
                     //Set up the TextView Values using the data from JSON
-                    String TID = obj.getString("TID");
-                    String VEHICLENO = obj.getString("VEHICLENO");
+                    TID = obj.getString("TID");
+                    VEHICLENO = obj.getString("VEHICLENO");
 
                     Calendar c = Calendar.getInstance();
                     SimpleDateFormat df = new SimpleDateFormat("dd-MM-yyyy HH:mm:ss");//("dd-MMM-yyyy HH:mm:ss:aa")
                     String formattedDate = df.format(c.getTime());
                     System.out.println("Current time =>" + formattedDate);
-                    String OUTTIME = formattedDate.toString();
+                    OUTTIME = formattedDate.toString();
 
                     if((TID.isEmpty()) && (VEHICLENO.isEmpty()) && (!OUTTIME.isEmpty())){
                         Intent i = new Intent(getApplicationContext(), Vehical_In.class);

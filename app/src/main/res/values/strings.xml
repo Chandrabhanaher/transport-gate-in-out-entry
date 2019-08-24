@@ -54,4 +54,5 @@
     <string name="from_date">From Date</string>
     <string name="To_date">To Date</string>
     <string name="select_loding_unloding">Select Loading/Unloading</string>
+    <string name="dock"> DOCK  \n In / Out </string>
 </resources>

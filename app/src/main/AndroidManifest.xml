@@ -19,6 +19,7 @@
         android:roundIcon="@mipmap/logo"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+        <activity android:name=".dock.Dock_In"></activity>
         <activity
             android:name=".Splash"
             android:label="@string/app_name"
@@ -31,33 +32,35 @@
         </activity>
         <activity
             android:name=".Home"
-			android:screenOrientation="portrait"
-            android:label="@string/ugc1" />
+            android:label="@string/ugc1"
+            android:screenOrientation="portrait" />
         <activity
             android:name=".vehicle_in_out.Vehical_In"
-			android:screenOrientation="portrait"
-            android:label="@string/vcalD" />
+            android:label="@string/vcalD"
+            android:screenOrientation="portrait" />
         <activity
             android:name=".vehicle_in_out.Tran_Veh_In"
             android:label="@string/ind"
-android:screenOrientation="portrait"			/>
-        <activity android:name=".vehicle_in_out.NewTrans"
-android:screenOrientation="portrait"		/>
-        <activity android:name=".printing.Prints" 
-		android:screenOrientation="portrait"/>
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".vehicle_in_out.NewTrans"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".printing.Prints"
+            android:screenOrientation="portrait" />
         <activity
             android:name=".printing.DeviceListActivity"
-            android:theme="@android:style/Theme.DeviceDefault.Dialog"
-android:screenOrientation="portrait"			/>
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.DeviceDefault.Dialog" />
         <activity android:name=".session.Login" />
         <activity
             android:name=".reports.Vehicle_Wise_Report"
-            android:label="@string/trans_report" 
-			android:screenOrientation="portrait"/>
+            android:label="@string/trans_report"
+            android:screenOrientation="portrait" />
         <activity
             android:name=".reports.Date_Reports"
-            android:label="@string/repotrt" 
-			android:screenOrientation="portrait"/>
+            android:label="@string/repotrt"
+            android:screenOrientation="portrait" />
     </application>
 
 </manifest>
