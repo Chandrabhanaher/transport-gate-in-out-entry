@@ -24,4 +24,5 @@ using manifest
      
  
 ## http library
+```
       useLibrary 'org.apache.http.legacy'
