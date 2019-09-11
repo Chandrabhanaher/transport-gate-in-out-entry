@@ -6,12 +6,13 @@ Using Blutooth Printer
 
 ```
 using manifest 
+```
   <uses-permission android:name="android.permission.CAMERA" />
   <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
   <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />  
   <uses-permission android:name="android.permission.BLUETOOTH" />
   <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
-
+```
 
 ## dependencies
 ```
@@ -21,7 +22,7 @@ using manifest
     implementation files('libs/itextpdf-5.5.5.jar')    
     implementation 'com.mcxiaoke.volley:library:1.0.19'
      
-     
+   ```  
  
 ## http library
 ```
